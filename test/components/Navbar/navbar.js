@@ -55,7 +55,7 @@ function Navbar() {
         <Link route="" message="Home" isActive={currentPath === '/'} tooltip="This is the Home page" />
         <Link route="calendar" message="Calendar" isActive={currentPath === '/calendar'} tooltip="A calendar for your schedule" />
         <Link route="prescriptions" message="Prescriptions" isActive={currentPath === '/prescriptions' } tooltip="A summary of your prescriptions"/>
-        <Link route="mail" message="Mails" isActive={currentPath === '/mail'} tooltip="A summary of your prescriptions"/>
+        <Link route="mail" message="Mails" isActive={currentPath === '/mail'} tooltip="A summary of your mail orders"/>
         <Link route="chat" message="Chat" isActive={currentPath === '/chat'} />
         <Link route="search" message="Search" isActive={currentPath === '/search'} />
       </div>
