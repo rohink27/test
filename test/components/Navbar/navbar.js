@@ -2,15 +2,21 @@ import './navbar.css';
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-function Link({ route, message, isActive }) {
+function Link({ route, message, isActive, tooltip }) {
   return (
+    <>
     <a
       className={`link ${isActive ? 'active' : ''}`}
       href={`/${route}`}
     >
       {message}
     </a>
+    <div className="tooltip">
+    {tooltip}
+    </div>
+    </>
   );
+
 }
 
 function Navbar() {
@@ -46,10 +52,10 @@ function Navbar() {
         Medication Tracker
       </div>
       <div>
-        <Link route="" message="Home" isActive={currentPath === '/'} />
-        <Link route="calendar" message="Calendar" isActive={currentPath === '/calendar'} />
-        <Link route="prescriptions" message="Prescriptions" isActive={currentPath === '/prescriptions'} />
-        <Link route="mail" message="Mails" isActive={currentPath === '/mail'} />
+        <Link route="" message="Home" isActive={currentPath === '/'} tooltip="This is the Home page" />
+        <Link route="calendar" message="Calendar" isActive={currentPath === '/calendar'} tooltip="A calendar for your schedule" />
+        <Link route="prescriptions" message="Prescriptions" isActive={currentPath === '/prescriptions' } tooltip="A summary of your prescriptions"/>
+        <Link route="mail" message="Mails" isActive={currentPath === '/mail'} tooltip="A summary of your prescriptions"/>
         <Link route="chat" message="Chat" isActive={currentPath === '/chat'} />
         <Link route="search" message="Search" isActive={currentPath === '/search'} />
       </div>
