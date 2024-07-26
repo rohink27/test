@@ -1,0 +1,37 @@
+/* calendar.css */
+.cal-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .week {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 7 days + 1 column for time */
+ 
+  }
+  
+  .day-header, .hour-cell {
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 35px;
+  }
+  
+  
+  .event {
+    background-color: lightblue;
+    width: 92%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+  }
+  
